@@ -13,12 +13,32 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "0df565a9-be95-4193-971d-5f0b6a55d20a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
+                    "name": "",
+                    "id": "9a3c9304-3e9b-4dc9-bafd-cf1362da14f8",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "2D Vector",
-                    "id": "3b63a41f-42c9-42b5-9222-815c424bb3af",
+                    "id": "1d5da02f-d5e4-416e-9d79-145e66ed9499",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -29,7 +49,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "452e2088-dafa-4b67-9d4a-4cf76189af29",
+                    "id": "9261b344-280f-40fa-83a3-27e0791bb5b7",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -40,7 +60,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "f8071305-5923-47cc-8e27-b43bb4ec318d",
+                    "id": "0be083ad-639d-4ca4-b8ce-ac18d2d56c63",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
@@ -51,7 +71,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "61895b51-4504-473e-9154-24b4dc9e938d",
+                    "id": "eccbaa7f-b979-47eb-b057-d839e054b4a7",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -62,7 +82,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "e7f932c4-b512-4ca1-8ca5-a8f27273e364",
+                    "id": "38341d45-4572-453b-a513-657411a761d8",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
