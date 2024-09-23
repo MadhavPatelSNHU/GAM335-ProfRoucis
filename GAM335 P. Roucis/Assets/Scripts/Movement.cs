@@ -30,15 +30,15 @@ public class Movement : MonoBehaviour
     void Update()
     {
         MovePlayer();
-        CameraMove();
+        /*CameraMove();*/
     }
 
     void MovePlayer()
     {
         Vector2 direction = moveAction.ReadValue<Vector2>();
-        transform.position += new Vector3(direction.x, direction.y) * speed * Time.deltaTime;
+        transform.position += new Vector3(direction.x, 0, direction.y) * speed * Time.deltaTime;
 
-        Vector3 jump = jumpAction.ReadValue<Vector3>(); 
+        Vector3 jump = jumpAction.ReadValue<Vector3>();
         transform.position += new Vector3(0, jump.z, 0) * jumpPower * Time.deltaTime;
 
     }
@@ -47,9 +47,9 @@ public class Movement : MonoBehaviour
     {
         xRotation -= Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity;
         yRotation += Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;
-        
+
         xRotation = Mathf.Clamp(xRotation, -90f, 90f); // to stop the player from looking above/below
-        
+
         transform.localEulerAngles = new Vector3(xRotation, yRotation, 0);
     }
 }
