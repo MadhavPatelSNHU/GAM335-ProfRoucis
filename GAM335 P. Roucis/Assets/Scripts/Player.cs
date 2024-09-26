@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class Movement : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    Rigidbody rb;
     PlayerInput playerInput;
     InputAction moveAction;
     InputAction jumpAction;
@@ -13,8 +14,12 @@ public class Movement : MonoBehaviour
     [SerializeField] float speed = 10;
     [SerializeField] float jumpPower = 10;
     [SerializeField] float sensitivity;
+    [SerializeField] GameObject bullet;
+    [SerializeField] GameObject bulletSpawn;
     float xRotation;
     float yRotation;
+    bool health;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +35,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         MovePlayer();
-        /*CameraMove();*/
+       /* CameraMove();*/
     }
 
     void MovePlayer()
@@ -38,8 +43,8 @@ public class Movement : MonoBehaviour
         Vector2 direction = moveAction.ReadValue<Vector2>();
         transform.position += new Vector3(direction.x, 0, direction.y) * speed * Time.deltaTime;
 
-        Vector3 jump = jumpAction.ReadValue<Vector3>();
-        transform.position += new Vector3(0, jump.z, 0) * jumpPower * Time.deltaTime;
+        /*Vector3 jump = jumpAction.ReadValue<Vector3>();
+        transform.position += new Vector3(0, jump.z, 0) * jumpPower * Time.deltaTime;*/
 
     }
 
