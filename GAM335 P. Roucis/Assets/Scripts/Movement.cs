@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class Player : MonoBehaviour
+public class Movement : MonoBehaviour
 {
-    Rigidbody rb;
+    
     PlayerInput playerInput;
     InputAction moveAction;
     InputAction jumpAction;
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject bulletSpawn;
     float xRotation;
     float yRotation;
-    bool health;
+    bool Playerhealth;
     
 
     // Start is called before the first frame update

@@ -7,24 +7,20 @@ public class SpawnPoints : MonoBehaviour
     [SerializeField] GameObject[] spawnPoints;
     [SerializeField] GameObject Enemy;
     float SpawnTimer = 5;
-    float SpawnTimerFaster = 10;
+    public int EnemyCount;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(SpawnCloneEnemy());
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator SpawnCloneEnemy()
     {
         int nextSpawnLocation = Random.Range(0, spawnPoints.Length);
-        Instaniate(Enemy, spawnPoints[nextSpawnLocation].transform.position /*Quanternion.identity*/);
-        yield return null;
+        Instaniate(Enemy, spawnPoints[nextSpawnLocation].transform.position, Quanternion.identity);
+        yield return new WaitForSeconds(SpawnTimer);
+
     }
 }
