@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class Movement : MonoBehaviour
@@ -10,11 +11,13 @@ public class Movement : MonoBehaviour
     InputAction moveAction;
     InputAction jumpAction;
     public Vector2 cam;
-    [SerializeField] float speed = 10;
-    [SerializeField] float jumpPower = 10;
-    [SerializeField] float sensitivity;
+    public float speed = 10;
+    public float jumpPower = 10;
+    public float sensitivity;
     float xRotation;
     float yRotation;
+
+    public int life;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +25,8 @@ public class Movement : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
         jumpAction = playerInput.actions.FindAction("Jump");
-        Cursor.lockState = CursorLockMode.Locked;
 
+        life = 5;
     }
 
     // Update is called once per frame
@@ -51,6 +54,18 @@ public class Movement : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f); // to stop the player from looking above/below
 
         transform.localEulerAngles = new Vector3(xRotation, yRotation, 0);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            life--;
+        }
+        if(life <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 }
 

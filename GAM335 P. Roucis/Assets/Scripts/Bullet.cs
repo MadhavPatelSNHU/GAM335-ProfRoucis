@@ -1,22 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
-    public float life = 4;
+    public float life = 2.5f;
+    int Win;
 
-    void Awake()
+    void Start()
     {
         Destroy(gameObject, life);
+        Win = 0;
+        
 
+    }
+
+    void Update()
+    {
+        
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            Win++;
+            Destroy(this.gameObject);
+            
+            
+        }
+        if (Win >= 1)
+        {
+            Debug.Log("win");
+            SceneManager.LoadScene(2);
         }
     }
 }

@@ -17,16 +17,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (health <= 0)
-        {
-
-            Destroy(gameObject);
-        }
-        if (health > 1)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
-        }
+        Health();
 
     }
 
@@ -42,5 +33,18 @@ public class Enemy : MonoBehaviour
     void MoveTo()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    void Health()
+    {
+        if (health <= 0)
+        {
+            this.gameObject.SetActive(false);
+        }
+        if (health > 1)
+        {
+            this.gameObject.SetActive(true);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+        }
     }
 }
