@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
             
             
         }
-        if (Win >= 1)
+        if (Win > 2)
         {
             Debug.Log("win");
             SceneManager.LoadScene(2);

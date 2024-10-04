@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Bullet"))
         {
-            health -= 1;
+            health =- 1;
             Debug.Log("Ow");
         }
     }
