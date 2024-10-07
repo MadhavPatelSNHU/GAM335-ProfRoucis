@@ -9,6 +9,7 @@ TagManager:
   - SpawnPoint
   - Trophy1
   - Trophy2
+  - Safe Trophy
   layers:
   - Default
   - TransparentFX

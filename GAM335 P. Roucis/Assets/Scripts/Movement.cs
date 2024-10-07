@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     float yRotation;
     HashSet<int> points = new HashSet<int>();
     public int life;
+    Dictionary<string, int> trophys = new Dictionary<string, int>();
 
     public enum AmmoType
     {
@@ -92,6 +93,21 @@ public class Movement : MonoBehaviour
                 SceneManager.LoadScene(2);
             }
         }
+        if (collision.gameObject.CompareTag("Safe Trophy"))
+        {
+            trophys.Add("Trophy, 100 points", 100);
+        }
+
+        if (trophys.ContainsKey("Trophy, 100 points"))
+        {
+            int value = trophys["Trophy, 100 points"];
+            Debug.Log("Safe Trophy! " + value + " Points");
+        }
+        else
+        {
+            Debug.Log("safe trophy not found");
+        }
+       
     }
 }
 
