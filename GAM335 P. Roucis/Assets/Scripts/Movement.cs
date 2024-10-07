@@ -16,8 +16,16 @@ public class Movement : MonoBehaviour
     public float sensitivity;
     float xRotation;
     float yRotation;
-
+    HashSet<int> points = new HashSet<int>();
     public int life;
+
+    public enum AmmoType
+    {
+        Shotgun,
+        Pistol,
+        Explosive,
+        LargeMachineGun,
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +42,7 @@ public class Movement : MonoBehaviour
     {
         MovePlayer();
         /*CameraMove();*/
+        points.Clear();
     }
 
     void MovePlayer()
@@ -65,6 +74,23 @@ public class Movement : MonoBehaviour
         if(life <= 0)
         {
             SceneManager.LoadScene(3);
+        }
+
+        if (collision.gameObject.CompareTag("Trophy1"))
+        {
+            points.Add(1);
+            if (points.Contains(1))
+            {
+                SceneManager.LoadScene(3);
+            }
+        }
+        if (collision.gameObject.CompareTag("Trophy2"))
+        {
+            points.Add(2);
+            if (points.Contains(2))
+            {
+                SceneManager.LoadScene(2);
+            }
         }
     }
 }

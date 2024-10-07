@@ -6,18 +6,19 @@ public class Enemy : MonoBehaviour
 {
     private GameObject player;
     public float moveSpeed = 1f;
-    int health = 5;
+    public int health;
     // Start is called before the first frame update
     void Start()
     {
-        MoveTo();
-        health = 5;
+
+        health = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
         Health();
+        MoveTo();
 
     }
 
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Bullet"))
         {
-            health =- 1;
+            health--;
             Debug.Log("Ow");
         }
     }
@@ -33,6 +34,7 @@ public class Enemy : MonoBehaviour
     void MoveTo()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
     }
 
     void Health()
@@ -44,7 +46,7 @@ public class Enemy : MonoBehaviour
         if (health > 1)
         {
             this.gameObject.SetActive(true);
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+            
         }
     }
 }
