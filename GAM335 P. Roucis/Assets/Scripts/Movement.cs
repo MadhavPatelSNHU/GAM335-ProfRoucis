@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Movement : MonoBehaviour
@@ -19,6 +20,7 @@ public class Movement : MonoBehaviour
     HashSet<int> points = new HashSet<int>();
     public int life;
     Dictionary<string, int> trophys = new Dictionary<string, int>();
+    private UIManager uiManager;
 
     public enum AmmoType
     {
@@ -36,6 +38,9 @@ public class Movement : MonoBehaviour
         jumpAction = playerInput.actions.FindAction("Jump");
 
         life = 5;
+        
+
+        uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -71,6 +76,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             life--;
+            uiManager.UpdateHealth(life);
         }
         if(life <= 0)
         {
