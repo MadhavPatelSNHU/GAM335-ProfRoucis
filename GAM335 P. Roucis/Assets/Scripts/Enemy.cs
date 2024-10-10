@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
 
-        health = 10;
+        health = 5;
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
         if (collider.gameObject.CompareTag("Bullet"))
         {
             health--;
-            Debug.Log("Ow");
+            /*Debug.Log("Ow");*/
         }
     }
 
