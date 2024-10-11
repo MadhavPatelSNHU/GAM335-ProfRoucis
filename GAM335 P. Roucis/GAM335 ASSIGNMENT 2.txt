@@ -1,0 +1,11 @@
+GAM335 ASSIGNMENT TWO PATCH NOTES
+
+- IMPROVED GUN
+	- Made bullet speed 35 instead of 20
+- ENEMIES
+	- Reduced health to 7 health instead of 10
+- GAMEPLAY
+	- Added gun model onto player
+	- UI for health bar is added
+	- New UI for main menu and win/lose screens
+	- Win Con are two trophies, one is different that makes you lose. The other is correct and sends you to the win screen (for the future: the next level). There now a coin/safe trophy that you can collect for points. When collected they will pop up in the debug log.
