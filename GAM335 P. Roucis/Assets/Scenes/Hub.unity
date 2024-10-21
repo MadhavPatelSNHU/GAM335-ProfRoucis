@@ -1970,7 +1970,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   APIKey: 4695cc2243efd4b1d62c6001c1bd907f
-  enemy: {fileID: 0}
+  enemy0: {fileID: 0}
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
+  Player: {fileID: 1753075239}
   clearColor: {r: 1, g: 0.9574407, b: 0.08962262, a: 0}
   RainColor: {r: 0, g: 0.6666667, b: 1, a: 0}
 --- !u!1 &1548475115

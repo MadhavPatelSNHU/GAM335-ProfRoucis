@@ -24,10 +24,13 @@ public class Weather : MonoBehaviour
     public GameObject enemy0;
     public GameObject enemy1;
     public GameObject enemy2;
-    public GameObject enemy3;
+    public GameObject Player;
+
+
 
     public Color clearColor;
     public Color RainColor;
+
 
 
     void Start()
@@ -50,21 +53,22 @@ public class Weather : MonoBehaviour
             Debug.Log(resp.weather[0].main);
             string condition = resp.weather[0].main;
 
-            condition = "snow";
+            condition = "Drizzle";
 
             switch (condition)
             {
-                case "clear":
+                case "Clear":
                     Destroy(enemy0);
                     break;
-                case "rain":
+                case "Rain":
                     Destroy(enemy1);
                     break;
-                case "drizzle":
-                    Destroy(enemy2);
+                case "Drizzle":
+                    GameObject.FindGameObjectWithTag("Enemy");
+                    
                     break;
-                case "snow":
-                    Destroy(enemy3);
+                case "Snow":
+                    gameObject.GetComponent<Renderer>().material.color = Color.green;
                     break;
             }
         }

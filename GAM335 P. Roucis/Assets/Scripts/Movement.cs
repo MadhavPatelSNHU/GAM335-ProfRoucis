@@ -39,8 +39,9 @@ public class Movement : MonoBehaviour
 
         life = 5;
         
-
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+
+        trophys.Clear();
         
     }
 
@@ -50,6 +51,7 @@ public class Movement : MonoBehaviour
         MovePlayer();
         /*CameraMove();*/
         points.Clear();
+        trophys.Clear();
         
     }
 

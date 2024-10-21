@@ -6,7 +6,7 @@ public class Gun : MonoBehaviour
 {
     public Transform BulletSpawnPoint;
     public GameObject BulletPrefab;
-    public float bulletSpeed = 30;
+    public float bulletSpeed;
 
     void Update()
     {
