@@ -1920,6 +1920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435903661}
   - component: {fileID: 1435903662}
+  - component: {fileID: 1435903663}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1956,6 +1957,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1028410165}
   isPaused: 0
+--- !u!114 &1435903663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435903660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b1d185e036a0c4faa38986485f243a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  APIKey: 4695cc2243efd4b1d62c6001c1bd907f
+  enemy: {fileID: 0}
+  clearColor: {r: 1, g: 0.9574407, b: 0.08962262, a: 0}
+  RainColor: {r: 0, g: 0.6666667, b: 1, a: 0}
 --- !u!1 &1548475115
 GameObject:
   m_ObjectHideFlags: 0

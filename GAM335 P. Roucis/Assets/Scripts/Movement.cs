@@ -41,6 +41,7 @@ public class Movement : MonoBehaviour
         
 
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        
     }
 
     // Update is called once per frame
@@ -49,6 +50,7 @@ public class Movement : MonoBehaviour
         MovePlayer();
         /*CameraMove();*/
         points.Clear();
+        
     }
 
     void MovePlayer()
