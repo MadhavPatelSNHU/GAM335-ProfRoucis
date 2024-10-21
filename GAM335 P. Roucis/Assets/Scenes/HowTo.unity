@@ -852,19 +852,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'USE YOUR PISTOL TO SHOOT THE ZOMBIES SPAWNING AND COMING YOUR WAY!
-
-
-    THERE
-    ARE TWO TROPHYS YOU NEED TO COLLIDE INTO TO WIN, BUT BE CAREFUL ONE OF THEM MIGHT
-    BE A TRICK!
-
-
-    STAY SAFE!
-
-
-    //wasd to move and left click to shoot. (hit
-    escape to pause)'
+  m_text: "USE YOUR PISTOL TO SHOOT THE ZOMBIES SPAWNING AND COMING YOUR WAY!\n\nTHERE
+    ARE TWO TROPHYS YOU NEED TO COLLIDE INTO TO MOVE TO THE NEXT LEVEL OR WIN!\n
+    BUT BE CAREFUL ONE OF THEM MIGHT BE A TRICK!\n\nSTAY SAFE!\n\n//wasd to move
+    and left click to shoot. (hit escape to pause)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

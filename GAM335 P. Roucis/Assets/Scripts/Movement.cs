@@ -100,7 +100,7 @@ public class Movement : MonoBehaviour
             points.Add(2);
             if (points.Contains(2))
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("Hub 1");
             }
         }
         if (collision.gameObject.CompareTag("Safe Trophy"))

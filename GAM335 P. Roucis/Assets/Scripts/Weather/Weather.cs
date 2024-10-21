@@ -21,12 +21,9 @@ public class Weather : MonoBehaviour
 
     [SerializeField] string APIKey;
 
-    public GameObject enemy0;
-    public GameObject enemy1;
-    public GameObject enemy2;
-    public GameObject Player;
-
-
+    public GameObject Spawner0;
+    public GameObject Spawner1;
+    public GameObject Spawner2;
 
     public Color clearColor;
     public Color RainColor;
@@ -53,22 +50,27 @@ public class Weather : MonoBehaviour
             Debug.Log(resp.weather[0].main);
             string condition = resp.weather[0].main;
 
-            condition = "Drizzle";
-
             switch (condition)
             {
                 case "Clear":
-                    Destroy(enemy0);
+                    Spawner0.SetActive(true);
+                    Spawner1.SetActive(true);
+                    Spawner2.SetActive(false);
                     break;
                 case "Rain":
-                    Destroy(enemy1);
+                    Spawner0.SetActive(false);
+                    Spawner1.SetActive(true);
+                    Spawner2.SetActive(true);
                     break;
                 case "Drizzle":
-                    GameObject.FindGameObjectWithTag("Enemy");
-                    
+                    Spawner0.SetActive(false);
+                    Spawner1.SetActive(true);
+                    Spawner2.SetActive(false);
                     break;
                 case "Snow":
-                    gameObject.GetComponent<Renderer>().material.color = Color.green;
+                    Spawner0.SetActive(true);
+                    Spawner1.SetActive(true);
+                    Spawner2.SetActive(true);
                     break;
             }
         }

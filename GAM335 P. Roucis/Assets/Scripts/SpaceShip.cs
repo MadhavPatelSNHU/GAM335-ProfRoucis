@@ -8,7 +8,7 @@ public class SpaceShip : MonoBehaviour
     public GameObject EndPoint;
     public GameObject Ship;
     public float speed = 10f;
-    public float delay = 0.5f;
+    public float delay = 0.1f;
 
     Vector3 targetPosition;
 
