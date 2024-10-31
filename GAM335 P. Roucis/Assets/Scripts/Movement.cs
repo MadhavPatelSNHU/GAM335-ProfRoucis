@@ -80,7 +80,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             life--;
-            uiManager.UpdateHealth(life);
+            //uiManager.UpdateHealth(life);
         }
         if(life <= 0)
         {
