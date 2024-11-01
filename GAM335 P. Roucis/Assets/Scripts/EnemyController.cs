@@ -15,7 +15,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         health.OnHealthChanged += (float ratio) =>
         {
-            healthbar.SetFillAmount(ratio);
+            //healthbar.SetFillAmount(ratio);
         };
 
         health.OnDied += () =>
