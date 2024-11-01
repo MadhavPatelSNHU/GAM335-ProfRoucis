@@ -11,6 +11,7 @@ TagManager:
   - Trophy2
   - Safe Trophy
   - Trophy3
+  - Heal
   layers:
   - Default
   - TransparentFX

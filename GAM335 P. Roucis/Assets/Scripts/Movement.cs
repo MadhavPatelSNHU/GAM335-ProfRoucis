@@ -75,6 +75,8 @@ public class Movement : MonoBehaviour
         transform.localEulerAngles = new Vector3(xRotation, yRotation, 0);
     }
 
+    #region Collision Methods
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -82,6 +84,7 @@ public class Movement : MonoBehaviour
             life--;
             uiManager.UpdateHealth(life);
         }
+        
         if (life <= 0)
         {
             SceneManager.LoadScene(3);
@@ -125,7 +128,21 @@ public class Movement : MonoBehaviour
         {
             Debug.Log("safe trophy not found");
         }
-       
+        #endregion
+    }
+    public void HealDamage(int amount, GameObject instigator)
+    {
+        void OnCollision(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Heal"))
+            {
+                life++;
+                uiManager.UpdateHealth(life);
+            }
+            int oldHealth = life;
+            life = Mathf.Clamp(life - amount, 0, life);
+            Debug.Log("healing");
+        }
     }
 }
 
