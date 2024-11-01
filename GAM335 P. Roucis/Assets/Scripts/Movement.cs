@@ -80,9 +80,9 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             life--;
-            //uiManager.UpdateHealth(life);
+            uiManager.UpdateHealth(life);
         }
-        if(life <= 0)
+        if (life <= 0)
         {
             SceneManager.LoadScene(3);
         }
@@ -92,7 +92,7 @@ public class Movement : MonoBehaviour
             points.Add(1);
             if (points.Contains(1))
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("LOSE");
             }
         }
         if (collision.gameObject.CompareTag("Trophy2"))
@@ -101,6 +101,14 @@ public class Movement : MonoBehaviour
             if (points.Contains(2))
             {
                 SceneManager.LoadScene("Hub 1");
+            }
+        }
+        if (collision.gameObject.CompareTag("Trophy3"))
+        {
+            points.Add(2);
+            if (points.Contains(2))
+            {
+                SceneManager.LoadScene("WIN");
             }
         }
         if (collision.gameObject.CompareTag("Safe Trophy"))

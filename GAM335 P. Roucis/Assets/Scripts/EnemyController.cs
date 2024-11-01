@@ -7,7 +7,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         Health health = GetComponent<Health>();
 
@@ -22,5 +22,5 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Destroy(gameObject);
         };
-    }
+    }*/
 }

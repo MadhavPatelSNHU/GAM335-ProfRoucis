@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    /*[SerializeField]
+    [SerializeField]
     private Text HealthText;
 
     public void UpdateHealth(int health)
     {
         HealthText.text = "Health: " + health;
-    }*/
+    }
 
 
-    #region Editor Visisble Properties
+    /*#region Editor Visisble Properties
 
     #endregion
 
@@ -33,5 +33,5 @@ public class UIManager : MonoBehaviour
     public void SetFillAmount(float amount)
     {
         //healthbarimage.fillamount = amount;
-    }
+    }*/
 }
