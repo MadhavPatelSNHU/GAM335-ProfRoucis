@@ -84,7 +84,14 @@ public class Movement : MonoBehaviour
             life--;
             uiManager.UpdateHealth(life);
         }
-        
+
+        if (collision.gameObject.CompareTag("Heal"))
+        {
+            life++;
+            uiManager.UpdateHealth(life);
+            Debug.Log("Healed");
+        }
+
         if (life <= 0)
         {
             SceneManager.LoadScene(3);
@@ -130,9 +137,9 @@ public class Movement : MonoBehaviour
         }
         #endregion
     }
-    public void HealDamage(int amount, GameObject instigator)
+    /*public void HealDamage(int amount)
     {
-        void OnCollision(Collision collision)
+        void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Heal"))
             {
@@ -140,9 +147,9 @@ public class Movement : MonoBehaviour
                 uiManager.UpdateHealth(life);
             }
             int oldHealth = life;
-            life = Mathf.Clamp(life - amount, 0, life);
+            life = Mathf.Clamp(life - life++, 0, life);
             Debug.Log("healing");
         }
-    }
+    }*/
 }
 
