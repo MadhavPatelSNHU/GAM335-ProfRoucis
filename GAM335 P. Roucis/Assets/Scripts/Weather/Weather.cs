@@ -72,6 +72,11 @@ public class Weather : MonoBehaviour
                     Spawner1.SetActive(true);
                     Spawner2.SetActive(true);
                     break;
+                case "Cloudy":
+                    Spawner0.SetActive(true);
+                    Spawner1.SetActive(false);
+                    Spawner2.SetActive(true);
+                    break;
             }
         }
     }
