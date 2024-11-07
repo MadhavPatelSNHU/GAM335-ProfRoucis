@@ -89,7 +89,7 @@ public class Movement : MonoBehaviour
         {
             life++;
             uiManager.UpdateHealth(life);
-            Debug.Log("Healed");
+            /*Debug.Log("Healed");*/
         }
 
         if (life <= 0)
