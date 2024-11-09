@@ -1989,7 +1989,7 @@ GameObject:
   - component: {fileID: 1489250889}
   - component: {fileID: 1489250888}
   m_Layer: 0
-  m_Name: Pink Starburst (heal) (1)
+  m_Name: Pink Starburst (heal)
   m_TagString: Heal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
