@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
@@ -26,8 +26,8 @@ public class MyInventory : MonoBehaviour
             Stacks = stacks;
         }
     }
-/*
-    public Item[] Items = new Item[10];*/
+*//*
+    public Item[] Items = new Item[10];*//*
 
     public Item?[] Items { get; private set; }
 
@@ -141,4 +141,4 @@ public class MyInventory : MonoBehaviour
             return false;
         }
     }
-}
+}*/

@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using unity;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
     private GameObject player;
     public float moveSpeed = 1f;
     public int health;
+    public int score;
+    private UIManager uiManager;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
         health = 5;
+        uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -43,6 +51,9 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             this.gameObject.SetActive(false);
+            score++;
+            uiManager.UpdateScore(score);
+
         }
         if (health > 1)
         {
