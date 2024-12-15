@@ -25,9 +25,6 @@ public class Weather : MonoBehaviour
     public GameObject Spawner1;
     public GameObject Spawner2;
 
-    public Color clearColor;
-    public Color RainColor;
-
 
 
     void Start()

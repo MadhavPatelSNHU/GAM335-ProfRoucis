@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateHealth(int health)
     {
-        HealthText.text = "Health: " + health;
+        HealthText.text = "Health: " + health; //update health
     }
     public void UpdateScore(int score)
     {

@@ -19,7 +19,7 @@ public class starburst : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")) //collide with player and destroy
         {
             Destroy(gameObject);
         }

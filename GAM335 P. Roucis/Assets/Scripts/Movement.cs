@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
 
         life = 5;
         
-        uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
+        uiManager = GameObject.Find("GameManager").GetComponent<UIManager>(); //for health
 
         trophys.Clear();
         
@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
         /*CameraMove();*/
         points.Clear();
         trophys.Clear();
-        ScoreText.text = "Score: " + Mathf.CeilToInt(score).ToString();
+        ScoreText.text = "Score: " + Mathf.CeilToInt(score).ToString(); //for score
 
     }
 
