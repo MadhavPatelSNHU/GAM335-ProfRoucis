@@ -63,10 +63,6 @@ public class Movement : MonoBehaviour
     {
         Vector2 direction = moveAction.ReadValue<Vector2>();
         transform.position += new Vector3(direction.x, 0, direction.y) * speed * Time.deltaTime;
-
-        Vector3 jump = jumpAction.ReadValue<Vector3>();
-        transform.position += new Vector3(0, jump.z, 0) * jumpPower * Time.deltaTime;
-
     }
 
     void CameraMove()
