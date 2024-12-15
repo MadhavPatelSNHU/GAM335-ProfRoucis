@@ -7,8 +7,6 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private Text HealthText;
-    [SerializeField]
-    private Text ScoreText;
 
     public void UpdateHealth(int health)
     {
@@ -16,12 +14,12 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateScore(int score)
     {
-        ScoreText.text = "Score: " + score;
+
     }
 
     private void Start()
     {
-        ScoreText.text = "Score: 0";
+
     }
 
 

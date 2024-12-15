@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         health = 5;
-        uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        
     }
 
     // Update is called once per frame
@@ -51,8 +51,6 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             this.gameObject.SetActive(false);
-            score++;
-            uiManager.UpdateScore(score);
 
         }
         if (health > 1)

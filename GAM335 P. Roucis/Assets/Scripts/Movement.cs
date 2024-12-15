@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-//using UnityEngine.UI;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class Movement : MonoBehaviour
@@ -21,6 +22,8 @@ public class Movement : MonoBehaviour
     public int life;
     Dictionary<string, int> trophys = new Dictionary<string, int>();
     private UIManager uiManager;
+    public int score;
+    public TMP_Text ScoreText;
 
     public enum AmmoType
     {
@@ -39,7 +42,7 @@ public class Movement : MonoBehaviour
 
         life = 5;
         
-        uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
 
         trophys.Clear();
         
@@ -52,7 +55,8 @@ public class Movement : MonoBehaviour
         /*CameraMove();*/
         points.Clear();
         trophys.Clear();
-        
+        ScoreText.text = "Score: " + Mathf.CeilToInt(score).ToString();
+
     }
 
     void MovePlayer()
@@ -123,6 +127,11 @@ public class Movement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Safe Trophy"))
         {
+            score += 50;
+            Update();
+        }
+        /*if (collision.gameObject.CompareTag("Safe Trophy"))
+        {
             trophys.Add("Trophy, 100 points", 100);
         }
 
@@ -134,7 +143,7 @@ public class Movement : MonoBehaviour
         else
         {
             Debug.Log("safe trophy not found");
-        }
+        }*/
         #endregion
     }
     /*public void HealDamage(int amount)

@@ -852,11 +852,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "USE YOUR PISTOL TO SHOOT THE ZOMBIES SPAWNING AND COMING YOUR WAY!\n\nTHERE
-    ARE TWO TROPHYS YOU NEED TO COLLIDE INTO TO MOVE TO THE NEXT LEVEL OR WIN!\n
-    BUT BE CAREFUL ONE OF THEM MIGHT BE A TRICK!\n\nSTAY SAFE - EAT YOUR FAVORITE
-    PINK STARBURST TO GAIN HEALTH!\n\n//wasd to move and left click to shoot. (hit
-    escape to pause)"
+  m_text: 'USE YOUR PISTOL TO SHOOT THE ZOMBIES SPAWNING AND COMING YOUR WAY!
+
+
+    THERE
+    ARE MULTIPLE TROPHYS ON THE MAP, SOME MAY BE DANGEROUS AND SOME MAY BE SAFE!
+    FIND THE RIGHT ONE TO ADD POINTS TO YOUR SCORE OR MOVE ON TO THE NEXT LEVEL!
+
+
+    STAY
+    SAFE - EAT YOUR FAVORITE PINK STARBURST TO GAIN HEALTH!
+
+
+    //wasd to move
+    and left click to shoot. (hit escape to pause)
+
+    //depending on the weather
+    (in hooksett nh) the levels may be easier or harder'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -883,7 +895,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.7
+  m_fontSize: 29.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -2,21 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Die : MonoBehaviour
+public class starburst : MonoBehaviour
 {
 
-    
     public void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     public void Update()
     {
-
+        
     }
 
     void OnCollisionEnter(Collision collision)
