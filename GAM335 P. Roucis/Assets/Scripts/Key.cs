@@ -1,28 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Key : MonoBehaviour
 {
-    public GameObject Door;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Door.SetActive(true);
-    }
+    public UnityEvent Pickup; // I GUESS ILL TRY TO USE AN EVENT IN A CLASS THATS ABOUT EVENTS
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Door.SetActive(false);
-            this.gameObject.SetActive(false);
+            Pickup.Invoke();
         }
     }
 }
