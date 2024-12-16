@@ -7,12 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Tutoria&Story");
     }
 
     public void HowToButton()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("HowTo");
     }
 
     public void QuitButton()
