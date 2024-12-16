@@ -12,15 +12,23 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 1f;
     public int health;
     public int score;
+    public int maxHealth = 5;
     private UIManager uiManager;
 
-
+    [SerializeField] FloatingEnemyHealthbar healthbar;
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        healthbar = GetComponentInChildren<FloatingEnemyHealthbar>();
+    }
     void Start()
     {
         health = 5;
         
+        healthbar.UpdateHealthBar(health, maxHealth);
+
     }
 
     // Update is called once per frame
@@ -36,6 +44,7 @@ public class Enemy : MonoBehaviour
         if (collider.gameObject.CompareTag("Bullet"))
         {
             health--;
+            healthbar.UpdateHealthBar(health, maxHealth);
             /*Debug.Log("Ow");*/
         }
     }
