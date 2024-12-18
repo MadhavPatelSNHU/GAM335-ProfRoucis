@@ -823,7 +823,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 303780190}
         m_TargetAssemblyTypeName: BackMenu, Assembly-CSharp
-        m_MethodName: BackButton
+        m_MethodName: BackButtonHard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

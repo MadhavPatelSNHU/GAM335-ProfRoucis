@@ -72,7 +72,7 @@ public class Weather : MonoBehaviour
                 case "Clouds":
                     Spawner0.SetActive(true);
                     Spawner1.SetActive(false);
-                    Spawner2.SetActive(true);
+                    Spawner2.SetActive(false);
                     break;
             }
         }

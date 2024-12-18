@@ -7,6 +7,10 @@ public class BackMenu : MonoBehaviour
 {
     public void BackButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main Menu");
+    }
+    public void BackButtonHard()
+    {
+        SceneManager.LoadScene("Hard Menu");
     }
 }

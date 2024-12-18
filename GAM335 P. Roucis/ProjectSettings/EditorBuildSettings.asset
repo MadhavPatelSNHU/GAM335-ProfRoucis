@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HowTo.unity
     guid: de1d393cad24f6e4fba335c4b47023c4
+  - enabled: 1
+    path: Assets/Scenes/Hard Menu.unity
+    guid: 8f0e46a7a60ff4d40b12dbd5bee3ff88
   m_configObjects: {}

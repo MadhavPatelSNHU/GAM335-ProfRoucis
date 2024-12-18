@@ -46,6 +46,12 @@ public class Enemy : MonoBehaviour
             healthbar.UpdateHealthBar(health, maxHealth);
             /*Debug.Log("Ow");*/
         }
+        if (collider.gameObject.CompareTag("Hard Bullet"))
+        {
+            health--;
+            healthbar.UpdateHealthBar(health, maxHealth);
+            /*Debug.Log("Ow");*/
+        }
     }
 
     void MoveTo()

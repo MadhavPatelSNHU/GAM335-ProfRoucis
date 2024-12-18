@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9a45286c8729441ba857d92d2173dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 9200167140359885070, guid: a9dfbda4cff6f1247b67c5c68409f7d7, type: 3}
+  enemyPrefab: {fileID: 9200167140359885070, guid: d8deae0ac8d9a4f479e5a341a06d7ef8, type: 3}
   enemySpawnInterval: 1
   spawnLocations:
   - {fileID: 1917887363}
@@ -2556,7 +2556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1228432834
 Transform:
   m_ObjectHideFlags: 0
@@ -2798,8 +2798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   APIKey: 4695cc2243efd4b1d62c6001c1bd907f
-  Spawner0: {fileID: 0}
-  Spawner1: {fileID: 0}
+  Spawner0: {fileID: 841529374}
+  Spawner1: {fileID: 1228432833}
   Spawner2: {fileID: 0}
 --- !u!114 &1435903664
 MonoBehaviour:
