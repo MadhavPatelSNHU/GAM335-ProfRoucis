@@ -94,7 +94,7 @@ public class Movement : MonoBehaviour
 
         if (life <= 0)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("LOSE");
         }
 
         if (collision.gameObject.CompareTag("Trophy1"))

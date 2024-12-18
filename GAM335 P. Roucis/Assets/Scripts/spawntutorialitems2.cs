@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class spawntutorialitems2 : MonoBehaviour
 {
-    public GameObject Door;
-    public GameObject Text;
-    public GameObject Key;
+    public UnityEvent Spawnitems;
+
     void Start()
     {
-        Door.SetActive(false);
-        Text.SetActive(false);
-        Key.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -25,10 +23,8 @@ public class spawntutorialitems2 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Door.SetActive(true);
-            Text.SetActive(true);
-            Key.SetActive(true);
-
+            Spawnitems.Invoke();
         }
+
     }
 }
