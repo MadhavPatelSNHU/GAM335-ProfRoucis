@@ -13,6 +13,7 @@ TagManager:
   - Trophy3
   - Heal
   - Hard Bullet
+  - Hard Player
   layers:
   - Default
   - TransparentFX

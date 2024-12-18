@@ -1,0 +1,160 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
+
+public class HardMovement : MonoBehaviour
+{
+    PlayerInput playerInput;
+    InputAction moveAction;
+    InputAction jumpAction;
+    public Vector2 cam;
+    public float speed = 10;
+    public float jumpPower = 10;
+    public float sensitivity;
+    float xRotation;
+    float yRotation;
+    HashSet<int> points = new HashSet<int>();
+    public int life;
+    Dictionary<string, int> trophys = new Dictionary<string, int>();
+    private UIManager uiManager;
+    public int score;
+    public TMP_Text ScoreText;
+
+    public enum AmmoType
+    {
+        Shotgun,
+        Pistol,
+        Explosive,
+        LargeMachineGun,
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        moveAction = playerInput.actions.FindAction("Move");
+        jumpAction = playerInput.actions.FindAction("Jump");
+
+        life = 10;
+
+        uiManager = GameObject.Find("GameManager").GetComponent<UIManager>(); //for health
+
+        trophys.Clear();
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        MovePlayer();
+        /*CameraMove();*/
+        points.Clear();
+        trophys.Clear();
+        ScoreText.text = "Score: " + Mathf.CeilToInt(score).ToString(); //for score
+
+    }
+
+    void MovePlayer()
+    {
+        Vector2 direction = moveAction.ReadValue<Vector2>();
+        transform.position += new Vector3(direction.x, 0, direction.y) * speed * Time.deltaTime;
+    }
+
+    void CameraMove()
+    {
+        xRotation -= Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity;
+        yRotation += Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;
+
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // to stop the player from looking above/below
+
+        transform.localEulerAngles = new Vector3(xRotation, yRotation, 0);
+    }
+
+    #region Collision Methods
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            life--;
+            uiManager.UpdateHealth(life);
+        }
+
+        if (collision.gameObject.CompareTag("Heal"))
+        {
+            life++;
+            uiManager.UpdateHealth(life);
+            /*Debug.Log("Healed");*/
+        }
+
+        if (life <= 0)
+        {
+            SceneManager.LoadScene("LOSE");
+        }
+
+        if (collision.gameObject.CompareTag("Trophy1"))
+        {
+            points.Add(1);
+            if (points.Contains(1))
+            {
+                SceneManager.LoadScene("LOSE");
+            }
+        }
+        if (collision.gameObject.CompareTag("Trophy2"))
+        {
+            points.Add(2);
+            if (points.Contains(2))
+            {
+                SceneManager.LoadScene("Hub 1");
+            }
+        }
+        if (collision.gameObject.CompareTag("Trophy3"))
+        {
+            points.Add(2);
+            if (points.Contains(2))
+            {
+                SceneManager.LoadScene("WIN");
+            }
+        }
+        if (collision.gameObject.CompareTag("Safe Trophy"))
+        {
+            score += 50;
+            Update();
+        }
+        /*if (collision.gameObject.CompareTag("Safe Trophy"))
+        {
+            trophys.Add("Trophy, 100 points", 100);
+        }
+
+        if (trophys.ContainsKey("Trophy, 100 points"))
+        {
+            int value = trophys["Trophy, 100 points"];
+            Debug.Log("Safe Trophy! " + value + " Points");
+        }
+        else
+        {
+            Debug.Log("safe trophy not found");
+        }*/
+        #endregion
+    }
+    /*public void HealDamage(int amount)
+    {
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Heal"))
+            {
+                life++;
+                uiManager.UpdateHealth(life);
+            }
+            int oldHealth = life;
+            life = Mathf.Clamp(life - life++, 0, life);
+            Debug.Log("healing");
+        }
+    }*/
+}
+

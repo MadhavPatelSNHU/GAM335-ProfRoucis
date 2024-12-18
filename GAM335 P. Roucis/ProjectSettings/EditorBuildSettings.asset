@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/WIN.unity
     guid: ff0fdf415d615574abd40a9a6077bd5c
   - enabled: 1
+    path: Assets/Scenes/Hard Hub.unity
+    guid: 7925f52debed74e43b300bd27ac64ab0
+  - enabled: 1
     path: Assets/Scenes/LOSE.unity
     guid: 3e5e375bcc1e71644b761b3bb6435e68
   - enabled: 1

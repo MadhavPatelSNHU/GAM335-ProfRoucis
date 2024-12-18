@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class tutorialskip : MonoBehaviour
+public class tutorialskip1 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -21,12 +21,9 @@ public class tutorialskip : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("WIN");
         }
-        if (collision.gameObject.CompareTag("Hard Player"))
-        {
-            SceneManager.LoadScene("Main Menu");
-        }
+
 
     }
 }
