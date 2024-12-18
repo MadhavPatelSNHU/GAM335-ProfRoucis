@@ -3170,6 +3170,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1169240771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 816236647186182584, guid: cb26de672b573874ca513b3d81c32a63, type: 3}
+  m_PrefabInstance: {fileID: 1128122945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1169240772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 365147044688302460, guid: cb26de672b573874ca513b3d81c32a63, type: 3}
@@ -4067,19 +4072,7 @@ MonoBehaviour:
   Spawnitems:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 556830676}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 885159528}
+      - m_Target: {fileID: 1731726404}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4104,6 +4097,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1035104948}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1169240771}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4256,6 +4261,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722511640}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1731726404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 816236647186182584, guid: cb26de672b573874ca513b3d81c32a63, type: 3}
+  m_PrefabInstance: {fileID: 877753578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1731726405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 365147044688302460, guid: cb26de672b573874ca513b3d81c32a63, type: 3}

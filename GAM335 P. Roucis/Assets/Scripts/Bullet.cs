@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class Bullet : MonoBehaviour
 {
     public float life = 2f;
-    /*int Win;*/
+    
 
     void Start()
     {
         Destroy(gameObject, life);
-        /*Win = 0;*/
+    
     }
 
     void Update()

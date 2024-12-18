@@ -6,13 +6,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class HardEnemy : MonoBehaviour
 {
     private GameObject player;
     public float moveSpeed = 1f;
     public int health;
     public int score;
-    public int maxHealth = 5;
+    public int maxHealth = 10;
 
     [SerializeField] FloatingEnemyHealthbar healthbar;
 
@@ -24,8 +24,8 @@ public class Enemy : MonoBehaviour
     }
     void Start()
     {
-        health = 5;
-        
+        health = 10;
+
         healthbar.UpdateHealthBar(health, maxHealth);
 
     }
@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Bullet"))
+        if (collider.gameObject.CompareTag("Hard Bullet"))
         {
             health--;
             healthbar.UpdateHealthBar(health, maxHealth);
@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
         if (health > 1)
         {
             this.gameObject.SetActive(true);
-            
+
         }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Safe Trophy
   - Trophy3
   - Heal
+  - Hard Bullet
   layers:
   - Default
   - TransparentFX

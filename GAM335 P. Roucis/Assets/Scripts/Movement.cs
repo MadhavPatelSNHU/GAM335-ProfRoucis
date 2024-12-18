@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
         moveAction = playerInput.actions.FindAction("Move");
         jumpAction = playerInput.actions.FindAction("Jump");
 
-        life = 5;
+        life = 20;
         
         uiManager = GameObject.Find("GameManager").GetComponent<UIManager>(); //for health
 
