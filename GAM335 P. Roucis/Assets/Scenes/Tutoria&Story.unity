@@ -826,7 +826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &147719903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,7 +1412,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4678079645506425191, guid: d8deae0ac8d9a4f479e5a341a06d7ef8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4873342159488403383, guid: d8deae0ac8d9a4f479e5a341a06d7ef8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1457,6 +1457,10 @@ PrefabInstance:
     - target: {fileID: 9200167140359885070, guid: d8deae0ac8d9a4f479e5a341a06d7ef8, type: 3}
       propertyPath: m_Name
       value: New Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200167140359885070, guid: d8deae0ac8d9a4f479e5a341a06d7ef8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1584,6 +1588,10 @@ PrefabInstance:
     - target: {fileID: 816236647186182584, guid: cb26de672b573874ca513b3d81c32a63, type: 3}
       propertyPath: m_Name
       value: Safe Trophy
+      objectReference: {fileID: 0}
+    - target: {fileID: 816236647186182584, guid: cb26de672b573874ca513b3d81c32a63, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1735,7 +1743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &648533898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1902,7 +1910,7 @@ GameObject:
   - component: {fileID: 728399870}
   - component: {fileID: 728399869}
   - component: {fileID: 728399867}
-  - component: {fileID: 728399871}
+  - component: {fileID: 728399872}
   m_Layer: 0
   m_Name: SpawnGunTutorial
   m_TagString: Untagged
@@ -1954,7 +1962,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1802746894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &728399871
+--- !u!114 &728399872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1963,12 +1971,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 728399866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e9ade981c091ff4c8d91d711b64316a, type: 3}
+  m_Script: {fileID: 11500000, guid: b25bc6494b73a4d469e78c49e9c1b3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 868682487}
-  Text: {fileID: 147719902}
-  Enemy: {fileID: 470128143}
+  Spawnitems:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 147719902}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 470128143}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 868682487}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &730221983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +2030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &730221984
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2750,6 +2794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pink Starburst (heal)
       objectReference: {fileID: 0}
+    - target: {fileID: 4320229145193071473, guid: 72c2001eb3523424c960cc100c7cea72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2775,7 +2823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095405081}
   - component: {fileID: 1095405078}
-  - component: {fileID: 1095405082}
+  - component: {fileID: 1095405083}
   m_Layer: 0
   m_Name: SpawnGunTutorial (2)
   m_TagString: Untagged
@@ -2819,7 +2867,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 792041492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1095405082
+--- !u!114 &1095405083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2828,13 +2876,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 1095405076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2ceec40dad6fa4b885d54d94ee2368, type: 3}
+  m_Script: {fileID: 11500000, guid: b25bc6494b73a4d469e78c49e9c1b3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Trophy: {fileID: 556830676}
-  Text: {fileID: 648533897}
-  UI: {fileID: 1124381539}
-  DangerousTrophy: {fileID: 1283033386}
+  Spawnitems:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 648533897}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 556830676}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1283033386}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1124381539}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1124381539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,7 +2948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1124381540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3232,7 +3327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1283033387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4282,7 +4377,7 @@ GameObject:
   - component: {fileID: 1732847333}
   - component: {fileID: 1732847337}
   - component: {fileID: 1732847335}
-  - component: {fileID: 1732847334}
+  - component: {fileID: 1732847338}
   m_Layer: 0
   m_Name: SpawnGunTutorial (3)
   m_TagString: Untagged
@@ -4305,20 +4400,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1217258798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1732847334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732847332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab22ca7d7fb4f524b8455383c490158c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Heal: {fileID: 1042581128}
-  PinkText: {fileID: 730221983}
 --- !u!65 &1732847335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4348,6 +4429,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732847332}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1732847338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732847332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25bc6494b73a4d469e78c49e9c1b3c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawnitems:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1042581128}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 730221983}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1781546682
 GameObject:
   m_ObjectHideFlags: 0
