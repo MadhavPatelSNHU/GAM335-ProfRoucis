@@ -65,16 +65,6 @@ public class Movement : MonoBehaviour
         transform.position += new Vector3(direction.x, 0, direction.y) * speed * Time.deltaTime;
     }
 
-    void CameraMove()
-    {
-        xRotation -= Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity;
-        yRotation += Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;
-
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // to stop the player from looking above/below
-
-        transform.localEulerAngles = new Vector3(xRotation, yRotation, 0);
-    }
-
     #region Collision Methods
 
     void OnCollisionEnter(Collision collision)
