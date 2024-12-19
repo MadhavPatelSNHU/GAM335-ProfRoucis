@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour
     private UIManager uiManager;
     public int score;
     public TMP_Text ScoreText;
+    public AudioSource GameManager;
+    public AudioClip Heal, Trophy, Hurt, Shoot;
 
     public enum AmmoType
     {
@@ -73,6 +75,8 @@ public class Movement : MonoBehaviour
         {
             life--;
             uiManager.UpdateHealth(life);
+            GameManager.clip = Hurt;
+            GameManager.Play();
         }
 
         if (collision.gameObject.CompareTag("Heal"))
@@ -80,6 +84,8 @@ public class Movement : MonoBehaviour
             life++;
             uiManager.UpdateHealth(life);
             /*Debug.Log("Healed");*/
+            GameManager.clip = Heal;
+            GameManager.Play();
         }
 
         if (life <= 0)
@@ -115,6 +121,8 @@ public class Movement : MonoBehaviour
         {
             score += 50;
             Update();
+            GameManager.clip = Trophy; 
+            GameManager.Play();
         }
         /*if (collision.gameObject.CompareTag("Safe Trophy"))
         {
