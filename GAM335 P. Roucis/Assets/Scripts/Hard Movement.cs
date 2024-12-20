@@ -24,6 +24,8 @@ public class HardMovement : MonoBehaviour
     private UIManager uiManager;
     public int score;
     public TMP_Text ScoreText;
+    public AudioSource GameManager;
+    public AudioClip Heal, Trophy, Hurt;
 
     public enum AmmoType
     {
@@ -81,12 +83,16 @@ public class HardMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            GameManager.clip = Hurt;
+            GameManager.Play();
             life--;
             uiManager.UpdateHealth(life);
         }
 
         if (collision.gameObject.CompareTag("Heal"))
         {
+            GameManager.clip = Heal;
+            GameManager.Play();
             life++;
             uiManager.UpdateHealth(life);
             /*Debug.Log("Healed");*/
@@ -123,6 +129,8 @@ public class HardMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Safe Trophy"))
         {
+            GameManager.clip = Trophy;
+            GameManager.Play();
             score += 50;
             Update();
         }

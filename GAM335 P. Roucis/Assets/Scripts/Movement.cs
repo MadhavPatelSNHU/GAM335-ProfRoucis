@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
     public int score;
     public TMP_Text ScoreText;
     public AudioSource GameManager;
-    public AudioClip Heal, Trophy, Hurt, Shoot;
+    public AudioClip Heal, Trophy, Hurt;
 
     public enum AmmoType
     {
